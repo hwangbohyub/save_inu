@@ -1,0 +1,27 @@
+<%= render 'header' %>
+<div class="wrap_home">
+  <div class="inform">가야할 곳은 어디지?</div>
+  <form action="/home/answer3" method="post">
+    <div class="col">
+    <div class="cols ra">
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio1" name="major" class="custom-control-input" value="com">
+        <label class="custom-control-label" for="customRadio1">컴퓨터공학부</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio2" name="major" class="custom-control-input" value="iac">
+        <label class="custom-control-label" for="customRadio2">정보통신공학과</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input type="radio" id="customRadio3" name="major" class="custom-control-input" value="emb">
+        <label class="custom-control-label" for="customRadio3">임베디드시스템공학과</label>
+      </div>
+
+    
+    </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >다음</button>
+  </form>
+  <div class="timer"><%=@time%></div>
+  <div id="yes"><%=session[:wrong]%></div>
+</div>

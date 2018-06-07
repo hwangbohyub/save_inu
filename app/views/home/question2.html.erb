@@ -1,0 +1,50 @@
+<%= render 'header' %>
+<div class="wrap_home">
+  <div class="inform">
+      <img src="/assets/q02.png" width="300px"></img>
+      <p><strong>세 글자 단어는 가나다 순서로</strong></p>
+    </div>
+  <form action="/home/answer2" method="post" name="inputform">
+    
+      <div class= writeAnswer>
+          
+      <div class= "cols">
+        <div class="lock">
+          <input type="text" class="str" name="text1" maxlength="1"></input>
+          <input type="text" class="str" name="text2" maxlength="1"></input>
+          <input type="text" class="str" name="text3" maxlength="1"></input>
+          <input type="text" class="str" name="text4" maxlength="1" style="border-color: #ff0000;"></input>
+        </div>
+      </div>
+      
+       <div class= "cols">
+        <div class="lock">
+          <input type="text" class="str" name="text5" maxlength="1" style="border-color: #ff0000;"></input>
+          <input type="text" class="str" name="text6" maxlength="1"></input>
+          <input type="text" class="str" name="text7" maxlength="1"></input>
+        </div>
+      </div>
+      
+       <div class= "cols">
+        <div class="lock">
+          <input type="text" class="str" name="text8" maxlength="1"></input>
+          <input type="text" class="str" name="text9" maxlength="1" style="border-color: #ff0000;"></input>
+          <input type="text" class="str" name="text10" maxlength="1"></input>
+        </div>
+      </div>
+      
+    </div>
+    <button type="submit" class="btn btn-primary" >다음</button>
+  </form>
+  <div class="timer"><%=@time%></div>
+  <div id="yes"><%=session[:wrong]%></div>
+</div>
+
+<script>
+  function autotab(current,to){
+    if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        to.focus() 
+    }
+  }
+</script>
